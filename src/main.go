@@ -31,7 +31,7 @@ func setReminderHandler(w http.ResponseWriter, r *http.Request) {
 	mu.Lock()
 	reminders = append(reminders, rem)
 	mu.Unlock()
-
+//200 response
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("Reminder set!"))
 }
